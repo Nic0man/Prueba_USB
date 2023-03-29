@@ -1,4 +1,4 @@
-import busqueda
+
 
 def main():
     dicc = {}
