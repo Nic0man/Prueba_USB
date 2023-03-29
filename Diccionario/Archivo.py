@@ -18,7 +18,7 @@ def main():
     print(dicc) 
     f.close()
 
-    busqueda.busqueda_dicc(dicc)
+    
      
     
 
