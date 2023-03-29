@@ -66,6 +66,7 @@ def main():
     print(f'Equipo: {deportista.getEquipo()} -#Goles: {deportista.getGoles()}')
     deportista.anotar(3)
     print(f'#Goles: {deportista.getGoles()}')
+    print(deportista.__sizeof__())  #Establece el tamaño del objeto en la memoria 
 
 if __name__ == "__main__":
     main()
