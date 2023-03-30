@@ -8,7 +8,8 @@ class Deportista:
     #     self.__nombre=None
     #     self.__documento=None
     #     self.__edad=None
-  
+    
+    #----------------Getters-----------------
     def getNombre(self):
         return self.__nombre
     
@@ -18,7 +19,7 @@ class Deportista:
     def getEdad(self):
         return self.__edad
 
-    #----------Setters-----------------
+    #----------------Setters-----------------
     def setNombre(self,nombre:str):
         self.__nombre=nombre
 
@@ -27,6 +28,10 @@ class Deportista:
 
     def setEdad(self,edad:int):
         self.__edad=edad
+
+    #------------ Sobrecarga del método --------------
+    def Medalla():
+        print('Recibe una medalla')
 
 class DeportistaFutbol(Deportista):
     def __init__(self,nombre:str,documento:int,edad:int,goles:int,nombreEquipo:str):
@@ -38,24 +43,34 @@ class DeportistaFutbol(Deportista):
     #     super().__init__()
     #     self.__goles=goles
     #     self.__equipo=nombreEquipo
-        
-    def setGoles(self,goles:int):
-        self.__goles=goles
+
+    #----------------Getters-----------------    
+    def getEquipo(self):
+        return self.__equipo
         
     def getGoles(self):
         return self.__goles
     
+    #----------------Setters-----------------
     def setEquipo(self,nombreEquipo:str):
         self.__equipo=nombreEquipo
 
-    def getEquipo(self):
-        return self.__equipo
-    
+    def setGoles(self,goles:int):
+        self.__goles=goles
+
+    #------------ método heredado --------------
     def anotar(self, goles:int):
         self.__goles +=goles
+    
+    #------------ Sobrecarga de método ---------
+    def Medalla():
+        print('Recibe otra medalla')
         
 def main():
     deportista = DeportistaFutbol('Falcao',122546,34,24,'Rayo Vallecano')
+    segundo = Deportista('Yepes', 54513224, 45)
+    DeportistaFutbol.Medalla()
+    Deportista.Medalla()
 
     # deportista = DeportistaFutbol(24,'Rayo Vallecano')
     # deportista.setNombre('Falcao')
