@@ -1,11 +1,13 @@
 
 Archivo = open('Alimentos.txt','rt')
-# informacion = Archivo.readlines()
-# datos=[]
-# for i in informacion:
-#     datos.append(i.rstrip('\n').split(','))
-# print(datos)
+informacion = Archivo.readlines()
+datos=[]
+for i in informacion:
+    datos.append(i.rstrip('\n').split(','))
+print(datos)
 
-# informacion = Archivo.read()
-# datos = informacion()
-# for i in 
+tabla = Archivo.read().split('\n')
+datos=[]
+for i in range(len(tabla)):
+    datos.append(tabla[i].split(','))
+print(datos)
