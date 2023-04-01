@@ -5,6 +5,7 @@ def escritura(data):
         if country not in pais:
             pais.append(country)
     pais.sort()
+    #print(pais.__len__())
     return(pais)
 
     # f=open('organizations-100.csv','w')
@@ -34,8 +35,8 @@ def indice(data,pais):
         for j in pais:
             if i[4]==j:
                 pos.append(pais.index(j)+1)
-    print(pos[:20])
-
+    #print(pos[:20])
+    return pos
     # f=open('organizations-100.csv','w')
     # for i in pos:
     #     f.write(str(f'{i}\n'))
@@ -44,7 +45,7 @@ def indice(data,pais):
 def main():
     data=lectura()          #Lee todas las lineas del archivo csv
     data_pais=escritura(data)       #Crea una matriz con los paises del archivo
-    indice(data,data_pais)          #crea una matriz con los indices de cada país
+    listado=indice(data,data_pais)          #crea una matriz con los indices de cada país
     
 
 
