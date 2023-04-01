@@ -1,6 +1,6 @@
 
 def lectura():
-    f=open('organizations-10000.csv','r')
+    f=open('organization_data.csv','r')
     data = []
     final=0;con=0
     while final!=1:
