@@ -3,7 +3,7 @@ class Ciudadano():
         self.__idioma=idioma
         self.__nombre=nombre
 
-    def setPais(self,idioma):
+    def setIdioma(self,idioma):
         self.__idioma = idioma
 
     def setNombre(self,nombre):
