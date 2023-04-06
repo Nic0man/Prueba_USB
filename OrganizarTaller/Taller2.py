@@ -38,7 +38,7 @@ def busqueda(data,pais):
     return empresas,empleados
 
 def analisisDatos(empresas,empleados):
-    print(f'\nPais:{empresas[0][4]}\n')
+    print(f'\nPaís:{empresas[0][4]}\n')
 
     print('Empresa con mayor # de empleados:')
     mayor=empleados.index(max(empleados))
@@ -54,6 +54,7 @@ def analisisDatos(empresas,empleados):
 
     promedio=round(sum(empleados)/len(empleados),2)
     print(f'Promedio empleos: {promedio}')
+    print(f'Cantidad de empresas: {len(empleados)}')
 
 def main():
     data=lectura()
