@@ -47,7 +47,7 @@ class Inglaterra(Ciudadano):
 
     # -------------- PoliMorfismo ----------------
     def Saludo(self):
-        print('Hello bro!')
+        print("What's up bro!")
 
 class China(Ciudadano):
     def __init__(self,idioma,nombre):
@@ -70,14 +70,17 @@ def darSaludo(objeto):
 
 def main():
     
-    Ciudadano1 = Colombia('español','David')
-    Ciudadano2 = Inglaterra('ingles','Mike')
-    Ciudadano3 = China('Mandarin','Liu')
-    Ciudadano4 = Ciudadano('Frances','Carla')
+    Ciudadano1 = Colombia('Español','David')
+    Ciudadano2 = Inglaterra('Inglés','Mike')
+    Ciudadano3 = China('Mandarín','Liu')
+    Ciudadano4 = Ciudadano('Francés','Carla')
 
+    print('---------- Ciudadanos del mundo ----------')
     print(f'Aplicante: {Ciudadano1.getNombre()}, Idioma: {Ciudadano1.getIdioma()}')
     print(f'Aplicante: {Ciudadano2.getNombre()}, Idioma: {Ciudadano2.getIdioma()}')
     print(f'Aplicante: {Ciudadano3.getNombre()}, Idioma: {Ciudadano3.getIdioma()}')
+    print(f'Aplicante: {Ciudadano4.getNombre()}, Idioma: {Ciudadano4.getIdioma()}\n')
+    print('-------- Como saludan en el mundo --------')
     darSaludo(Ciudadano1)
     darSaludo(Ciudadano2)
     darSaludo(Ciudadano3)
