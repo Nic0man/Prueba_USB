@@ -12,7 +12,7 @@ def consulta(correo, password):
     return resultado
 
 
-def manipulacion():
+def manipulacion(Usuario,correo, password,codigo):
     db=sqlite3.connect('Mensajes.s3db')
     db.row_factory = sqlite3.Row
     cursor = db.cursor()
@@ -27,7 +27,7 @@ def manipulacion():
 
 def main():
     consulta('David','david@usbbog.edu.co','123456','1')
-    manipulacion()
+    manipulacion('david@usbbog.edu.co','123456')
 
 
 if __name__ == "__main__":
