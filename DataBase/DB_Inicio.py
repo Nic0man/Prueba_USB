@@ -5,8 +5,8 @@ def validar(usuario):
     db=sqlite3.connect("datos.s3db")
     db.row_factory=sqlite3.Row
     cursor=db.cursor()
-    consulta="select * from Usuarios where apellido='" + usuario +"'"
-    #consulta="select * from Usuarios"
+    #consulta="select * from Usuarios where apellido='" + usuario +"'"
+    consulta="select * from Usuarios"
     cursor.execute(consulta)
     resultado=cursor.fetchall()
     for i in resultado:
@@ -47,7 +47,10 @@ def Registrar(nombre,apellido,edad):
 
 
 def main():
-    #Registrar('Alfredo','Torres',62)
+    nombre=input('Ingrese el nombre: ')
+    apellido=input('Ingrese el apellido: ')
+    edad=int(input('Ingrese la edad: '))
+    Registrar(nombre,apellido,edad)
     validar('Torres')
     validar2('Torres')
 
