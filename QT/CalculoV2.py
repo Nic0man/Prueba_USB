@@ -12,12 +12,11 @@ class Principal(PyQt.QMainWindow):
         uic.loadUi('App_calculoV2.ui',self)
         self.show()
         
-        self.pushButton.clicked.connect(self.calcular)
+        self.pushButton.clicked.connect(lambda: self.calcular(int(self.num2txt.text()),int(self.num1txt.text())))
+        #self.pushButton.clicked.connect(self.calcular)
         self.actionCerrar.triggered.connect(exit)
 
-    def calcular(self):
-        uno = int(self.num1txt.text())
-        dos = int(self.num2txt.text())
+    def calcular(self,uno,dos):
         if self.Sumar.isChecked()==True:
             self.resultado.setText(str(uno+dos))
         elif self.Restar.isChecked()==True:
